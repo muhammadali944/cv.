@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Schedule</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+}
+
+.card{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    color:#fff;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    font-weight:600;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+th, td{
+    padding:12px;
+}
+
+th{
+    background: rgba(255,255,255,0.2);
+    font-weight:600;
+}
+
+tr:nth-child(even){
+    background: rgba(255,255,255,0.05);
+}
+
+tr:hover{
+    background: rgba(255,255,255,0.15);
+    transition:0.3s;
+}
+
+.nav{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#fff;
+    background: rgba(255,255,255,0.2);
+    padding:8px 20px;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.nav a:hover{
+    background:#fff;
+    color:#203a43;
+}
+
+@media(max-width:768px){
+    .card{
+        padding:20px;
+    }
+    table{
+        font-size:12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="nav">
+    <a href="index.html">&larr; Back</a>
+</div>
+
+<div class="card">
+    <h1>My Weekly Schedule</h1>
+
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>6-7 AM</th>
+            <th>8-12 PM</th>
+            <th>1-4 PM</th>
+            <th>5-7 PM</th>
+            <th>9-10 PM</th>
+        </tr>
+
+        <tr>
+            <td>Monday</td>
+            <td>Exercise</td>
+            <td>College</td>
+            <td>Study</td>
+            <td>Friends</td>
+            <td>Reading</td>
+        </tr>
+
+        <tr>
+            <td>Tuesday</td>
+            <td>Exercise</td>
+            <td>College</td>
+            <td>Practice Coding</td>
+            <td>Family Time</td>
+            <td>Reading</td>
+        </tr>
+
+        <tr>
+            <td>Wednesday</td>
+            <td>Exercise</td>
+            <td>College</td>
+            <td>Study</td>
+            <td>Friends</td>
+            <td>Self Learning</td>
+        </tr>
+
+        <tr>
+            <td>Thursday</td>
+            <td>Exercise</td>
+            <td>College</td>
+            <td>Assignments</td>
+            <td>Family Time</td>
+            <td>Reading</td>
+        </tr>
+
+        <tr>
+            <td>Friday</td>
+            <td>Exercise</td>
+            <td>College</td>
+            <td>Study</td>
+            <td>Friends</td>
+            <td>Islamic Study</td>
+        </tr>
+
+        <tr>
+            <td>Saturday</td>
+            <td>Late Wake Up</td>
+            <td>Home Work</td>
+            <td>Practice Coding</td>
+            <td>Friends</td>
+            <td>Movie Time</td>
+        </tr>
+
+        <tr>
+            <td>Sunday</td>
+            <td>Relax</td>
+            <td>Family Time</td>
+            <td>Planning Week</td>
+            <td>Outing</td>
+            <td>Early Sleep</td>
+        </tr>
+
+    </table>
+</div>
+
+</div>
+
+</body>
+</html>
