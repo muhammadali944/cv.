@@ -1,56 +1,258 @@
-<html>
-    <head>
-        <body>
-            <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Student CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Schedule</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+}
+
+.card{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    color:#fff;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    font-weight:600;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+th, td{
+    padding:12px;
+}
+
+th{
+    background: rgba(255,255,255,0.2);
+    font-weight:600;
+}
+
+tr:nth-child(even){
+    background: rgba(255,255,255,0.05);
+}
+
+tr:hover{
+    background: rgba(255,255,255,0.15);
+    transition:0.3s;
+}
+
+.nav{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#fff;
+    background: rgba(255,255,255,0.2);
+    padding:8px 20px;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.nav a:hover{
+    background:#fff;
+    color:#203a43;
+}
+
+/* ============================= */
+/* 📱 RESPONSIVE DESIGN START */
+/* ============================= */
+
+@media (max-width:768px){
+
+    body{
+        padding:20px 10px;
+        align-items:flex-start;
+    }
+
+    .card{
+        padding:20px 15px;
+    }
+
+    h1{
+        font-size:20px;
+    }
+
+    /* Table to Card Layout */
+    table, thead, tbody, th, td, tr{
+        display:block;
+        width:100%;
+    }
+
+    thead{
+        display:none;
+    }
+
+    tr{
+        margin-bottom:15px;
+        background: rgba(255,255,255,0.08);
+        border-radius:12px;
+        padding:10px;
+    }
+
+    td{
+        text-align:right;
+        padding:10px;
+        position:relative;
+        font-size:13px;
+        border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    td:last-child{
+        border-bottom:none;
+    }
+
+    td::before{
+        content: attr(data-label);
+        position:absolute;
+        left:10px;
+        font-weight:600;
+        text-align:left;
+    }
+}
+
+@media (max-width:480px){
+
+    h1{
+        font-size:18px;
+    }
+
+    .nav a{
+        padding:6px 15px;
+        font-size:12px;
+    }
+
+    td{
+        font-size:12px;
+        padding:8px;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-<h1>Your Name</h1>
-<p>Email: your@email.com</p>
-<p>Phone: 03XXXXXXXXX</p>
-<p>Address: Karachi, Pakistan</p>
+<div class="container">
 
-<hr>
+<div class="nav">
+    <a href="index.html">&larr; Back</a>
+</div>
 
-<h2>Career Objective</h2>
-<p>
-I am a 2nd year student and want to improve my skills and gain practical experience.
-</p>
+<div class="card">
+    <h1>My Weekly Schedule</h1>
 
-<h2>Education</h2>
-<ul>
-    <li>
-        Intermediate (2nd Year)  
-        <br>Board of Intermediate Education, Karachi
-    </li>
-    <li>
-        Matriculation  
-        <br>Board of Secondary Education, Karachi
-    </li>
-</ul>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>6-7 AM</th>
+            <th>8-12 PM</th>
+            <th>1-4 PM</th>
+            <th>5-7 PM</th>
+            <th>9-10 PM</th>
+        </tr>
 
-<h2>Skills</h2>
-<ul>
-    <li>HTML (Beginner)</li>
-    <li>Computer Basics</li>
-    <li>MS Word</li>
-</ul>
+        <tr>
+           <td data-label="Day">Monday</td>
+    <td data-label="6-7 AM">Exercise</td>
+    <td data-label="8-12 PM">College</td>
+    <td data-label="1-4 PM">Study</td>
+    <td data-label="5-7 PM">Friends</td>
+    <td data-label="9-10 PM">Reading</td>
+        </tr>
 
-<h2>Personal Information</h2>
-<p>Nationality: Pakistani</p>
-<p>City: Karachi</p>
+        <tr>
+            <td data-label="Day">Tuesday</td>
+            <td data-label="6-7 AM">Exercise</td>
+            <td data-label="8-12 PM">College</td>
+            <td data-label="1-4 PM">Practice Coding</td>
+            <td data-label="5-7 PM">Family Time</td>
+            <td data-label="9-10 PM">Reading</td>
+        </tr>
 
-<h2>Declaration</h2>
-<p>
-I declare that the above information is true and correct to the best of my knowledge.
-</p>
+        <tr>
+            <td data-label="Day">Wednesday</td>
+            <td data-label="6-7 AM">Exercise</td>
+            <td data-label="8-12 PM">College</td>
+            <td data-label="1-4 PM">Study</td>
+            <td data-label="5-7 PM">Friends</td>
+            <td data-label="9-10 PM">Self Learning</td>
+        </tr>
 
+        <tr>
+            <td data-label="Day">Thursday</td>
+            <td data-label="6-7 AM">Exercise</td>
+            <td data-label="8-12 PM">College</td>
+            <td data-label="1-4 PM">Assignments</td>
+            <td data-label="5-7 PM">Family Time</td>
+            <td data-label="9-10 PM">Reading</td>
+        </tr>
+
+        <tr>
+            <td data-label="Day">Friday</td>
+            <td data-label="6-7 AM">Exercise</td>
+            <td data-label="8-12 PM">College</td>
+            <td data-label="1-4 PM">Study</td>
+            <td data-label="5-7 PM">Friends</td>
+            <td data-label="9-10 PM">Islamic Study</td>
+        </tr>
+
+        <tr>
+            <td data-label="Day">Saturday</td>
+            <td data-label="6-7 AM">Late Wake Up</td>
+            <td data-label="8-12 PM">Home Work</td>
+            <td data-label="1-4 PM">Practice Coding</td>
+            <td data-label="5-7 PM">Friends</td>
+            <td data-label="9-10 PM">Movie Time</td>
+        </tr>
+
+        <tr>
+            <td data-label="Day">Sunday</td>
+            <td data-label="6-7 AM">Relax</td>
+            <td data-label="8-12 PM">Family Time</td>
+            <td data-label="1-4 PM">Planning Week</td>
+            <td data-label="5-7 PM">Outing</td>
+            <td data-label="9-10 PM">Early Sleep</td>
+        </tr>
+
+    </table>
+</div>
+
+</div>
 </body>
-</html>
-
-        </body>
-    </head>
 </html>
